@@ -19,7 +19,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="img/hero.webp" as="image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Bulle & Bois", "url": "https://bulleetbois.fr/", "serviceType": "Mise en relation pour l'installation de spas, bains nordiques, saunas et hammams", "areaServed": {"@type": "Country", "name": "France"}, "provider": {"@type": "Organization", "name": "Bulle & Bois", "url": "https://bulleetbois.fr/", "logo": "https://bulleetbois.fr/apple-touch-icon.png", "email": "vtricheur@gmail.com"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Demande de devis gratuite et sans engagement"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Bulle & Bois", "url": "https://bulleetbois.fr/", "serviceType": "Mise en relation pour l'installation de spas, bains nordiques, saunas et hammams", "areaServed": {"@type": "Country", "name": "France"}, "provider": {"@type": "Organization", "name": "Bulle & Bois", "url": "https://bulleetbois.fr/", "logo": "https://bulleetbois.fr/apple-touch-icon.png", "email": "contact@bulleetbois.fr"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Demande de devis gratuite et sans engagement"}}</script>
 <style>
 @font-face{font-family:"Gloock";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/gloock-latin-400-normal.woff2") format("woff2")}
 @font-face{font-family:"Figtree";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/figtree-latin-400-normal.woff2") format("woff2")}
@@ -208,6 +208,12 @@ footer p+p{margin-top:6px}
 body.on-legal .hero,body.on-legal main{display:none}
 footer a{color:var(--accent)}
 .consent a{color:var(--accent)}
+
+/* WhatsApp */
+.wa-inline{font-size:.92rem;font-weight:600;color:var(--accent);text-align:center}
+.wa-float{position:fixed;z-index:30;right:calc(max(16px,env(safe-area-inset-right,0px)) + 4px);bottom:calc(20px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:#1F9D55;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+.wa-float:hover{filter:brightness(1.08)}
+body.on-legal .wa-float{display:none}
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:50;background:rgba(5,10,9,.92);display:flex;align-items:center;justify-content:center;padding:calc(24px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .lb img{max-width:100%;max-height:100%;border-radius:10px;object-fit:contain}
@@ -308,6 +314,7 @@ footer a{color:var(--accent)}
             <textarea id="details" name="details" placeholder="Nombre de places, bois souhaité (cèdre, thermo-pin…), poêle à bois ou électrique…"></textarea></div>
           <label class="consent"><input type="checkbox" id="rgpd" name="rgpd"> J'accepte que Bulle &amp; Bois me recontacte et transmette ma demande à 3 artisans maximum de ma région, qui pourront me joindre par téléphone ou email au sujet de ce projet. <a href="#confidentialite">En savoir plus</a></label>
           <button class="btn btn-accent" type="submit">Recevoir mes devis gratuits</button>
+          <a class="wa-inline" href="https://wa.me/33637990092?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20un%20projet%20de%20spa%2C%20bain%20nordique%2C%20sauna%20ou%20hammam." target="_blank" rel="noopener">Vous préférez WhatsApp ? Écrivez-nous au 06 37 99 00 92</a>
           <p class="msg" id="msg" role="alert" aria-live="polite"></p>
         </div>
         <div class="done" id="done" hidden>
@@ -478,7 +485,7 @@ footer a{color:var(--accent)}
     <h1>Politique de confidentialité</h1>
     <p class="legal-date">Dernière mise à jour : 29 octobre 2026</p>
     <h2>Qui traite vos données</h2>
-    <p>Le responsable du traitement est Victor Tricheur, entrepreneur individuel (nom commercial « Strikela Agencie », SIRET 994 247 831 00013), éditeur du site Bulle &amp; Bois. Contact : vtricheur@gmail.com · 06 37 99 00 92.</p>
+    <p>Le responsable du traitement est Victor Tricheur, entrepreneur individuel (nom commercial « Strikela Agencie », SIRET 994 247 831 00013), éditeur du site Bulle &amp; Bois. Contact : contact@bulleetbois.fr · 06 37 99 00 92.</p>
     <h2>Les données collectées</h2>
     <p>Uniquement celles que vous saisissez dans le formulaire de devis : nom, téléphone, email, code postal, type de projet, budget, délai, emplacement et précisions éventuelles.</p>
     <h2>Pourquoi nous les utilisons</h2>
@@ -497,7 +504,7 @@ footer a{color:var(--accent)}
     <h2>Combien de temps nous les gardons</h2>
     <p>12 mois après notre dernier échange au sujet de votre projet, puis elles sont supprimées.</p>
     <h2>Vos droits</h2>
-    <p>Vous pouvez à tout moment accéder à vos données, les faire rectifier ou supprimer, vous opposer à leur traitement, en demander la limitation ou la portabilité, et retirer votre consentement. Écrivez à vtricheur@gmail.com : nous répondons sous un mois. Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la CNIL (cnil.fr).</p>
+    <p>Vous pouvez à tout moment accéder à vos données, les faire rectifier ou supprimer, vous opposer à leur traitement, en demander la limitation ou la portabilité, et retirer votre consentement. Écrivez à contact@bulleetbois.fr : nous répondons sous un mois. Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la CNIL (cnil.fr).</p>
     <h2>Cookies</h2>
     <p>Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience. Les polices de caractères sont hébergées sur le site lui-même : aucune donnée n'est envoyée à un service tiers lors de votre visite.</p>
   </div>
@@ -532,7 +539,7 @@ footer a{color:var(--accent)}
       <p>Éditeur : Victor Tricheur EI, nom commercial « Strikela Agencie »</p>
       <p>SIRET 994 247 831 00013</p>
       <p>Adresse : Rouen (76)</p>
-      <p>Téléphone : 06 37 99 00 92 · Email : vtricheur@gmail.com</p>
+      <p>Téléphone : 06 37 99 00 92 · Email : contact@bulleetbois.fr</p>
       <p>Directeur de la publication : Victor Tricheur</p>
       <p>Hébergement : GitHub Pages, GitHub Inc., San Francisco, USA</p>
     </div>
@@ -544,6 +551,8 @@ footer a{color:var(--accent)}
   </div>
 </footer>
 
+
+<a class="wa-float" href="https://wa.me/33637990092?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20un%20projet%20de%20spa%2C%20bain%20nordique%2C%20sauna%20ou%20hammam." target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-1.9-.9-3.2-1.7-4.4-3.8-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6-.1-.2-.8-1.8-1-2.5-.3-.6-.5-.6-.8-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.7 5.8 5.1 2.2.9 3 1 4.1.8.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg></a>
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo agrandie">
   <img id="lb-img" alt="">
@@ -618,7 +627,7 @@ footer a{color:var(--accent)}
 /* Formulaire */
 (function(){
   // Les demandes partent par email (FormSubmit) vers la boîte de Bulle & Bois, puis l'application de pilotage les importe. Vide = mode aperçu.
-  var ENDPOINT = "https://formsubmit.co/ajax/vtricheur@gmail.com";
+  var ENDPOINT = "https://formsubmit.co/ajax/contact@bulleetbois.fr";
   var form = document.getElementById("quote");
   var msg = document.getElementById("msg");
   form.addEventListener("submit", function(e){
