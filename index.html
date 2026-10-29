@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bulle &amp; Bois · Devis spa, bain nordique, sauna et hammam sur mesure</title>
+<meta name="description" content="Devis gratuits pour spa, jacuzzi, bain nordique, sauna et hammam sur mesure partout en France. Décrivez votre projet en deux minutes, nous vous mettons en relation avec des artisans proches de chez vous.">
+<link rel="canonical" href="https://bulleetbois.fr/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#14302A">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Bulle & Bois">
+<meta property="og:title" content="Bulle & Bois · Devis spa, bain nordique, sauna et hammam sur mesure">
+<meta property="og:description" content="Devis gratuits pour spa, jacuzzi, bain nordique, sauna et hammam sur mesure partout en France. Décrivez votre projet en deux minutes, nous vous mettons en relation avec des artisans proches de chez vous.">
+<meta property="og:url" content="https://bulleetbois.fr/">
+<meta property="og:image" content="https://bulleetbois.fr/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="img/hero.webp" as="image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Bulle & Bois", "url": "https://bulleetbois.fr/", "serviceType": "Mise en relation pour l'installation de spas, bains nordiques, saunas et hammams", "areaServed": {"@type": "Country", "name": "France"}, "provider": {"@type": "Organization", "name": "Bulle & Bois", "url": "https://bulleetbois.fr/", "logo": "https://bulleetbois.fr/apple-touch-icon.png", "email": "vtricheur@gmail.com"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Demande de devis gratuite et sans engagement"}}</script>
+<style>
+@font-face{font-family:"Gloock";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/gloock-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Figtree";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/figtree-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Figtree";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/figtree-latin-500-normal.woff2") format("woff2")}
+@font-face{font-family:"Figtree";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/figtree-latin-600-normal.woff2") format("woff2")}
+@font-face{font-family:"Figtree";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/figtree-latin-700-normal.woff2") format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2")}
+/* Layout: steam-and-timber — full-bleed photo hero with the quote form floating on it, then photo-led bands: four product doors, a masonry of inspirations, an immersive stats band, the process, prices, questions. */
+:root{
+  --bg:#EDF1EF;--surface:#F8FAF9;--ink:#14302A;--muted:#4E6560;--line:#C9D4D0;
+  --accent:#1F7A74;--accent-ink:#FFFFFF;--ember:#C26A2B;--band:#14302A;--band-ink:#E6EEEB;
+  --field:#FFFFFF;--focus:#1F7A74;--ok:#1E6B47;--err:#A3342A;
+  --photo-ink:#F4F7F5;--photo-shade:rgba(8,18,15,.62);
+  --f-display:"Gloock",Georgia,"Times New Roman",serif;
+  --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1A18;--surface:#15231F;--ink:#E3ECE8;--muted:#9DB2AC;--line:#2A3D38;
+  --accent:#4FB8AF;--accent-ink:#0B1513;--ember:#E09358;--band:#0A1311;--band-ink:#D7E3DF;
+  --field:#0F1B18;--focus:#6FD0C7;--ok:#5FC293;--err:#F08A7E;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1A18;--surface:#15231F;--ink:#E3ECE8;--muted:#9DB2AC;--line:#2A3D38;
+  --accent:#4FB8AF;--accent-ink:#0B1513;--ember:#E09358;--band:#0A1311;--band-ink:#D7E3DF;
+  --field:#0F1B18;--focus:#6FD0C7;--ok:#5FC293;--err:#F08A7E;color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.5rem,5.6vw,4.6rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,3.6vw,2.9rem)}
+h3{font-size:1.45rem}
+p{margin:0}
+a{color:var(--accent)}
+img{display:block}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;border:0;border-radius:999px;padding:14px 22px;text-decoration:none;cursor:pointer}
+.btn-accent{background:var(--accent);color:var(--accent-ink)}
+.btn-accent:hover{filter:brightness(1.08)}
+.btn-ghost{background:rgba(255,255,255,.14);color:var(--photo-ink);border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;color:var(--photo-ink);background:#1b2522}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 60%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,16,14,.82) 0%,rgba(8,16,14,.55) 45%,rgba(8,16,14,.15) 75%),linear-gradient(to bottom,rgba(8,16,14,.55),rgba(8,16,14,0) 22%)}
+#steam{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:22px}
+.logo{font-family:var(--f-display);font-size:1.7rem;color:var(--photo-ink);text-decoration:none}
+.logo span{color:#F0A56A}
+.top nav{display:flex;gap:22px;flex-wrap:wrap}
+.top nav a{color:rgba(244,247,245,.85);text-decoration:none;font-weight:500;font-size:.95rem}
+.top nav a:hover{color:#fff}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-block:40px 88px}
+.hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.hero .eyebrow{color:#F0C9A6}
+.lede{font-size:1.22rem;max-width:36ch;color:rgba(244,247,245,.9)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;padding:0;margin:0;list-style:none}
+.facts li{display:flex;align-items:center;gap:8px;font-weight:600}
+.facts li::before{content:"";width:8px;height:8px;border-radius:50%;background:#7FE0D6}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.temps{display:flex;gap:28px;flex-wrap:wrap;margin-top:18px;padding-top:20px;border-top:1px solid rgba(255,255,255,.22)}
+.temps div{display:flex;flex-direction:column}
+.temps b{font-family:var(--f-mono);font-weight:500;font-size:1.5rem;font-variant-numeric:tabular-nums}
+.temps small{color:rgba(244,247,245,.75);font-size:.85rem}
+
+/* form card */
+.quote{background:var(--surface);color:var(--ink);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);min-width:0}
+.quote h2{font-size:1.8rem}
+.quote .sub{color:var(--muted);font-size:.95rem;margin-top:-6px}
+fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;min-width:0}
+legend{font-weight:600;margin-bottom:8px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--field);cursor:pointer;font-size:.95rem;font-weight:500}
+.chip input:checked+span{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chip input:focus-visible+span{outline:3px solid var(--focus);outline-offset:2px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+label.l{font-weight:600;font-size:.9rem}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:10px;padding:11px 12px}
+textarea{min-height:76px;resize:vertical}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:var(--muted);line-height:1.45}
+.consent input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--accent)}
+.quote button.btn{justify-content:center;font-size:1.05rem;border-radius:12px;padding:15px}
+.msg{font-size:.95rem;font-weight:500}
+.msg.err{color:var(--err)}
+.done{display:flex;flex-direction:column;gap:12px;padding:8px 0}
+.done h2{color:var(--ok)}
+
+/* ---------- sections ---------- */
+section.band{padding-block:88px}
+.sec-head{display:flex;flex-direction:column;gap:12px;max-width:62ch;margin-bottom:44px}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+/* product doors */
+.doors{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.door{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4.4;max-width:100%;color:var(--photo-ink);display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;background:#1b2522}
+.door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.door::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(8,16,14,.9) 0%,rgba(8,16,14,.45) 45%,rgba(8,16,14,.05) 70%)}
+.door:hover img{transform:scale(1.06)}
+.door-body{padding:22px;display:flex;flex-direction:column;gap:10px}
+.door .price{font-family:var(--f-mono);font-size:.82rem;letter-spacing:.06em;color:#F0C9A6}
+.door h3{font-size:1.7rem}
+.door ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px;font-size:.93rem;color:rgba(244,247,245,.88)}
+.door ul li::before{content:"— ";color:#7FE0D6}
+.door button{align-self:flex-start;margin-top:6px;font:inherit;font-weight:700;font-size:.92rem;background:var(--photo-ink);color:#14302A;border:0;border-radius:999px;padding:10px 16px;cursor:pointer}
+.door button:hover{background:#fff}
+
+/* inspirations masonry */
+.masonry{columns:3 300px;column-gap:16px}
+.shot{break-inside:avoid;margin:0 0 16px;position:relative;border-radius:14px;overflow:hidden;cursor:zoom-in;background:#1b2522}
+.shot img{width:100%;height:auto;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.shot:hover img{transform:scale(1.05)}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 14px;color:var(--photo-ink);background:linear-gradient(to top,rgba(8,16,14,.82),rgba(8,16,14,0));display:flex;flex-direction:column}
+.shot figcaption b{font-family:var(--f-display);font-weight:400;font-size:1.2rem}
+.shot figcaption span{font-size:.86rem;opacity:.88}
+.tag{position:absolute;top:12px;left:12px;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(8,16,14,.55);color:var(--photo-ink);padding:4px 9px;border-radius:999px;backdrop-filter:blur(4px)}
+.credit{margin-top:8px;font-size:.82rem;color:var(--muted)}
+
+/* immersive band */
+.immersive{position:relative;color:var(--photo-ink);overflow:hidden;background:#1b2522}
+.immersive>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 70%}
+.immersive::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,16,14,.1) 0%,rgba(8,16,14,.75) 60%)}
+.immersive .wrap{position:relative;z-index:1;display:flex;justify-content:flex-end;padding-block:120px}
+.imm-copy{max-width:520px;display:flex;flex-direction:column;gap:18px}
+.imm-copy p{color:rgba(244,247,245,.9);font-size:1.1rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:10px}
+.stats div{border-top:1px solid rgba(255,255,255,.3);padding-top:12px;display:flex;flex-direction:column}
+.stats b{font-family:var(--f-mono);font-weight:500;font-size:1.6rem;font-variant-numeric:tabular-nums}
+.stats small{font-size:.85rem;color:rgba(244,247,245,.78)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{display:flex;flex-direction:column;gap:10px;counter-increment:s;padding-top:18px;border-top:2px solid var(--ink)}
+.steps li::before{content:"Étape " counter(s);font-family:var(--f-mono);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ember)}
+.steps p{color:var(--muted)}
+
+/* prices */
+.dark{background:var(--band);color:var(--band-ink)}
+.dark .sec-head p,.dark .eyebrow{color:color-mix(in srgb,var(--band-ink) 70%,transparent)}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:720px}
+th,td{text-align:left;padding:18px 14px;border-bottom:1px solid color-mix(in srgb,var(--band-ink) 18%,transparent);vertical-align:top}
+th{font-family:var(--f-mono);font-weight:500;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:color-mix(in srgb,var(--band-ink) 65%,transparent)}
+td.name{display:flex;align-items:center;gap:14px;font-family:var(--f-display);font-size:1.3rem;white-space:nowrap}
+td.name img{width:56px;height:56px;border-radius:10px;object-fit:cover;flex:none}
+td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{margin-top:18px;font-size:.88rem;color:color-mix(in srgb,var(--band-ink) 65%,transparent)}
+
+/* faq */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px 40px}
+details{border-bottom:1px solid var(--line);padding-block:16px}
+summary{cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--f-mono);color:var(--accent)}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--muted);max-width:60ch}
+
+/* closing */
+.closing{position:relative;overflow:hidden;color:var(--photo-ink);background:#1b2522}
+.closing>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.closing::after{content:"";position:absolute;inset:0;background:rgba(8,16,14,.6)}
+.closing .wrap{position:relative;z-index:1;padding-block:110px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
+.closing p{max-width:46ch;color:rgba(244,247,245,.9)}
+
+footer{padding-block:44px 60px;color:var(--muted);font-size:.88rem}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+footer h3{font-family:var(--f-body);font-weight:700;font-size:.95rem;color:var(--ink);margin-bottom:8px}
+footer p+p{margin-top:6px}
+
+
+/* pages légales */
+.legal-page{background:var(--bg);min-height:100vh}
+.legal-wrap{max-width:760px;padding-block:40px 80px;display:flex;flex-direction:column;gap:14px}
+.legal-wrap h1{font-size:clamp(2rem,4vw,2.8rem)}
+.legal-wrap h2{font-size:1.35rem;margin-top:18px}
+.legal-wrap p,.legal-wrap li{color:var(--ink);max-width:68ch}
+.legal-wrap ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+.legal-date{color:var(--muted);font-size:.9rem}
+.legal-back{font-weight:600;text-decoration:none}
+body.on-legal .hero,body.on-legal main{display:none}
+footer a{color:var(--accent)}
+.consent a{color:var(--accent)}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(5,10,9,.92);display:flex;align-items:center;justify-content:center;padding:calc(24px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb img{max-width:100%;max-height:100%;border-radius:10px;object-fit:contain}
+.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));font:inherit;font-weight:700;background:var(--photo-ink);color:#14302A;border:0;border-radius:999px;padding:8px 14px;cursor:pointer}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero-bg{animation:drift 32s ease-in-out infinite alternate}
+  @keyframes drift{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.1) translate(-1.5%,-1%)}}
+  .chip span{transition:background .15s}
+}
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:36px;padding-block:24px 56px}
+  .doors{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr;gap:24px}
+  .faq{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr}
+  .immersive .wrap{padding-block:80px}
+  .immersive::after{background:rgba(8,16,14,.66)}
+}
+@media (max-width:560px){
+  .row{grid-template-columns:1fr}
+  .quote{padding:20px}
+  .top nav{display:none}
+  .doors{grid-template-columns:1fr}
+  .door{aspect-ratio:4/4.6}
+  .stats{grid-template-columns:1fr 1fr}
+  section.band{padding-block:64px}
+}
+</style>
+</head>
+<body>
+
+
+<header class="hero">
+  <img class="hero-bg" src="img/hero.webp" alt="Bain nordique en bois chauffé au poêle devant un chalet illuminé, au crépuscule">
+  <canvas id="steam" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="#">Bulle <span>&amp;</span> Bois</a>
+      <nav aria-label="Navigation principale">
+        <a href="#univers">Nos univers</a>
+        <a href="#inspirations">Inspirations</a>
+        <a href="#budgets">Budgets</a>
+        <a href="#faq">Questions</a>
+      </nav>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Partout en France</p>
+        <h1>Votre bulle de chaleur, construite pour votre jardin.</h1>
+        <p class="lede">Spa, bain nordique, sauna ou hammam sur mesure. Décrivez votre projet en deux minutes : un conseiller vous rappelle, puis nous vous mettons en relation avec des artisans proches de chez vous.</p>
+        <ul class="facts">
+          <li>Gratuit, sans engagement</li>
+          <li>Les artisans les plus proches</li>
+          <li>Un conseiller vous rappelle</li>
+        </ul>
+        <div class="hero-ctas">
+          <a class="btn btn-ghost" href="#inspirations">Voir les inspirations</a>
+        </div>
+        <div class="temps" aria-label="Repères de température">
+          <div><b>38–40 °C</b><small>l'eau d'un spa</small></div>
+          <div><b>80–100 °C</b><small>l'air d'un sauna</small></div>
+          <div><b>~45 °C</b><small>la vapeur d'un hammam</small></div>
+        </div>
+      </div>
+
+      <form class="quote" id="quote" novalidate>
+        <div id="form-body" style="display:contents">
+          <h2>Recevoir mes devis</h2>
+          <p class="sub">Deux minutes. Vos coordonnées vont uniquement aux artisans choisis pour votre projet.</p>
+          <fieldset>
+            <legend>Votre projet</legend>
+            <div class="chips" role="group">
+              <label class="chip"><input type="radio" name="projet" id="p-spa" value="Spa / jacuzzi" checked><span>Spa / jacuzzi</span></label>
+              <label class="chip"><input type="radio" name="projet" id="p-nordique" value="Bain nordique"><span>Bain nordique</span></label>
+              <label class="chip"><input type="radio" name="projet" id="p-sauna" value="Sauna"><span>Sauna</span></label>
+              <label class="chip"><input type="radio" name="projet" id="p-hammam" value="Hammam"><span>Hammam</span></label>
+              <label class="chip"><input type="radio" name="projet" id="p-autre" value="Plusieurs / autre"><span>Plusieurs</span></label>
+            </div>
+          </fieldset>
+          <div class="row">
+            <div class="field"><label class="l" for="budget">Budget</label>
+              <select id="budget" name="budget"><option>Moins de 5 000 €</option><option selected>5 000 – 10 000 €</option><option>10 000 – 20 000 €</option><option>Plus de 20 000 €</option><option>Je ne sais pas encore</option></select></div>
+            <div class="field"><label class="l" for="delai">Délai</label>
+              <select id="delai" name="delai"><option>Dès que possible</option><option selected>D'ici 3 mois</option><option>D'ici 6 mois</option><option>Plus tard / je me renseigne</option></select></div>
+          </div>
+          <div class="row">
+            <div class="field"><label class="l" for="cp">Code postal</label><input type="text" id="cp" name="cp" inputmode="numeric" maxlength="5" autocomplete="postal-code" placeholder="27110"></div>
+            <div class="field"><label class="l" for="lieu">Emplacement</label>
+              <select id="lieu" name="lieu"><option selected>Extérieur / jardin</option><option>Terrasse</option><option>Intérieur</option></select></div>
+          </div>
+          <div class="row">
+            <div class="field"><label class="l" for="nom">Nom</label><input type="text" id="nom" name="nom" autocomplete="name"></div>
+            <div class="field"><label class="l" for="tel">Téléphone</label><input type="tel" id="tel" name="tel" autocomplete="tel"></div>
+          </div>
+          <div class="field"><label class="l" for="email">Email</label><input type="email" id="email" name="email" autocomplete="email"></div>
+          <div class="field"><label class="l" for="details">Précisions (facultatif)</label>
+            <textarea id="details" name="details" placeholder="Nombre de places, bois souhaité (cèdre, thermo-pin…), poêle à bois ou électrique…"></textarea></div>
+          <label class="consent"><input type="checkbox" id="rgpd" name="rgpd"> J'accepte que Bulle &amp; Bois me recontacte et transmette ma demande à 3 artisans maximum de ma région, qui pourront me joindre par téléphone ou email au sujet de ce projet. <a href="#confidentialite">En savoir plus</a></label>
+          <button class="btn btn-accent" type="submit">Recevoir mes devis gratuits</button>
+          <p class="msg" id="msg" role="alert" aria-live="polite"></p>
+        </div>
+        <div class="done" id="done" hidden>
+          <p class="eyebrow">Demande reçue</p>
+          <h2>Merci, c'est noté.</h2>
+          <p>Un conseiller vous rappelle pour préciser votre projet, puis nous le transmettons aux artisans adaptés près de chez vous.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="band" id="univers">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Nos univers</p>
+      <h2>Quatre façons de prendre le temps</h2>
+      <p>Choisissez ce qui vous fait envie. Les artisans adaptent dimensions, bois, chauffage et finitions à votre maison.</p>
+    </div>
+    <div class="doors">
+      <article class="door">
+        <img src="img/spa1.webp" alt="Spa maçonné blanc sur une terrasse ombragée, devant une façade aux volets blancs" loading="lazy">
+        <div class="door-body">
+          <span class="price">dès 4 000 € posé</span>
+          <h3>Spa &amp; jacuzzi</h3>
+          <ul><li>Jets massants, eau à 38 °C toute l'année</li><li>Posé, encastré ou semi-enterré</li></ul>
+          <button type="button" data-pick="p-spa">Devis spa</button>
+        </div>
+      </article>
+      <article class="door">
+        <img src="img/nord8.webp" alt="Bain nordique en bois avec cheminée de poêle, posé sur un dallage en pierre dans un jardin" loading="lazy">
+        <div class="door-body">
+          <span class="price">dès 4 200 €</span>
+          <h3>Bain nordique</h3>
+          <ul><li>Chauffé au bois, sans électricité</li><li>Cèdre, thermo-pin ou mélèze</li></ul>
+          <button type="button" data-pick="p-nordique">Devis bain nordique</button>
+        </div>
+      </article>
+      <article class="door">
+        <img src="img/sau13.webp" alt="Sauna tonneau en bois noir avec porte vitrée et cheminée, dans un pré" loading="lazy">
+        <div class="door-body">
+          <span class="price">dès 4 000 €</span>
+          <h3>Sauna</h3>
+          <ul><li>Tonneau, chalet ou cabine vitrée</li><li>Poêle à bois ou électrique</li></ul>
+          <button type="button" data-pick="p-sauna">Devis sauna</button>
+        </div>
+      </article>
+      <article class="door">
+        <img src="img/ham19.webp" alt="Hammam en pierre sombre avec banquettes éclairées et lumière tamisée" loading="lazy">
+        <div class="door-body">
+          <span class="price">sur mesure dès 9 000 €</span>
+          <h3>Hammam</h3>
+          <ul><li>Maçonné ou en cabine</li><li>Banquettes chauffantes, ciel étoilé</li></ul>
+          <button type="button" data-pick="p-hammam">Devis hammam</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="inspirations" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Inspirations</p>
+      <h2>Imaginez-vous déjà dedans</h2>
+      <p>Des idées pour votre projet. Touchez une photo pour l'agrandir.</p>
+    </div>
+    <div class="masonry">
+      <figure class="shot"><img src="img/spa4.webp" alt="Bain bouillonnant en bois sous une verrière ouverte sur la montagne" loading="lazy"><span class="tag">Spa</span><figcaption><b>Sous verrière</b><span>Profiter du spa même quand il pleut</span></figcaption></figure>
+      <figure class="shot"><img src="img/sau23.webp" alt="Intérieur de sauna en bois avec poêle à bois allumé et grande baie sur la forêt" loading="lazy"><span class="tag">Sauna</span><figcaption><b>Poêle à bois et baie vitrée</b><span>Le feu d'un côté, la forêt de l'autre</span></figcaption></figure>
+      <figure class="shot"><img src="img/spa6.webp" alt="Baignoire îlot noire sur une terrasse en bois face aux collines au coucher du soleil" loading="lazy"><span class="tag">Bain extérieur</span><figcaption><b>Bain avec vue</b><span>Baignoire îlot sur terrasse, eau chauffée au bois</span></figcaption></figure>
+      <figure class="shot"><img src="img/sau17.webp" alt="Sauna en bois ouvert sur un étang au coucher du soleil" loading="lazy"><span class="tag">Sauna</span><figcaption><b>Vue sur l'eau</b><span>Un sauna orienté plein ouest</span></figcaption></figure>
+      <figure class="shot"><img src="img/nord11.webp" alt="Bain nordique devant une petite dépendance en pierre, dans un jardin en pente" loading="lazy"><span class="tag">Bain nordique</span><figcaption><b>Esprit maison de campagne</b><span>Le bois s'accorde avec la vieille pierre</span></figcaption></figure>
+      <figure class="shot"><img src="img/sau16.webp" alt="Sauna moderne en bois clair avec éclairage indirect et poêle en pierre" loading="lazy"><span class="tag">Sauna</span><figcaption><b>Lignes contemporaines</b><span>Éclairage indirect, poêle en pierre ollaire</span></figcaption></figure>
+      <figure class="shot"><img src="img/spa2.webp" alt="Spa avec habillage bois au bord d'un lac, entouré de sapins" loading="lazy"><span class="tag">Spa</span><figcaption><b>Face au paysage</b><span>Habillage bois, couvercle isolant</span></figcaption></figure>
+      <figure class="shot"><img src="img/nord9.webp" alt="Bain nordique en bois dans une forêt de sapins enneigés" loading="lazy"><span class="tag">Bain nordique</span><figcaption><b>Même en hiver</b><span>38 °C dans l'eau, 0 °C dehors</span></figcaption></figure>
+      <figure class="shot"><img src="img/sau14.webp" alt="Intérieur de sauna en bois sombre avec poêle à pierres et grande fenêtre sur la campagne" loading="lazy"><span class="tag">Sauna</span><figcaption><b>Fenêtre sur la campagne</b><span>Poêle à pierres, banquettes en bois clair</span></figcaption></figure>
+      <figure class="shot"><img src="img/nord3.webp" alt="Bain nordique en bois clair dans un sous-bois, la cheminée du poêle fumant" loading="lazy"><span class="tag">Bain nordique</span><figcaption><b>Au fond du jardin</b><span>La fumée annonce un bain bientôt à 38 °C</span></figcaption></figure>
+    </div>
+    <p class="credit">Photos d'illustration, licence Unsplash. Les réalisations de nos artisans partenaires arrivent bientôt.</p>
+  </div>
+</section>
+
+<section class="immersive" aria-labelledby="imm-title">
+  <img src="img/nord12.webp" alt="Bain nordique fumant face à un paysage de collines enneigées au soleil couchant" loading="lazy">
+  <div class="wrap">
+    <div class="imm-copy">
+      <p class="eyebrow" style="color:#F0C9A6">Le rituel</p>
+      <h2 id="imm-title">Chaud dedans, froid dehors. C'est tout le plaisir.</h2>
+      <p>Un bain nordique se chauffe au feu de bois pendant que vous préparez la soirée. Un sauna monte en température en moins d'une heure. Un spa reste prêt toute l'année.</p>
+      <div class="stats">
+        <div><b>2–3 h</b><small>pour chauffer un bain nordique</small></div>
+        <div><b>~45 min</b><small>pour un sauna à 80 °C</small></div>
+        <div><b>365 j</b><small>d'usage pour un spa couvert</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="comment">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Comment ça marche</p>
+      <h2>Trois étapes, sans engagement</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Vous décrivez le projet</h3><p>Type d'équipement, budget, délai et lieu. Deux minutes suffisent.</p></li>
+      <li><h3>Nous vous rappelons</h3><p>Un conseiller précise avec vous le projet, puis le transmet à des professionnels qui interviennent dans votre secteur sur ce type d'ouvrage.</p></li>
+      <li><h3>Vous comparez les devis</h3><p>Chaque artisan vous rappelle pour préciser le besoin. Vous restez libre de ne rien signer.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band dark" id="budgets">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Repères de prix</p>
+      <h2>Ce que coûte un projet sur mesure</h2>
+      <p>Fourchettes indicatives, fourniture et pose. Le terrassement, la dalle et le raccordement électrique peuvent s'ajouter.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Équipement</th><th>Budget courant</th><th>Ce que ça comprend</th><th>À prévoir</th></tr></thead>
+        <tbody>
+          <tr><td class="name"><img src="img/spa1.webp" alt="">Spa / jacuzzi</td><td class="num">4 000 – 12 000 €</td><td>Spa rigide posé au sol, installation comprise. Comptez jusqu'à 20 000 € pour 6 à 10 places.</td><td>Dalle plane, ligne électrique dédiée, accès pour la livraison</td></tr>
+          <tr><td class="name"><img src="img/nord8.webp" alt="">Bain nordique</td><td class="num">4 200 – 9 000 €</td><td>Bain en bois avec poêle, 4 à 8 places. Le haut du budget correspond aux versions complètes avec filtration.</td><td>Poêle à bois ou électrique, bois type cèdre ou thermo-pin</td></tr>
+          <tr><td class="name"><img src="img/sau13.webp" alt="">Sauna</td><td class="num">4 000 – 15 000 €</td><td>Sauna extérieur, du tonneau compact au chalet sur mesure. Poêle de 900 à 1 500 € pour 4 à 6 personnes.</td><td>Emplacement plat, alimentation électrique ou conduit pour poêle à bois</td></tr>
+          <tr><td class="name"><img src="img/ham19.webp" alt="">Hammam</td><td class="num">9 000 – 12 000 €</td><td>Hammam maçonné sur mesure, posé. Une cabine préfabriquée démarre autour de 900 à 2 000 €.</td><td>Pièce étanche, générateur de vapeur, carrelage ou béton ciré</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Fourchettes relevées en octobre 2026 chez des fabricants et sur des guides de prix spécialisés. Les prix réels dépendent des dimensions, des matériaux et de l'accès au chantier : seul le devis de l'artisan fait foi.</p>
+  </div>
+</section>
+
+<section class="band" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Questions fréquentes</p>
+      <h2>Avant de faire votre demande</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Le service est-il vraiment gratuit ?</summary><p>Oui. Vous ne payez rien et ne vous engagez à rien. Ce sont les artisans partenaires qui rémunèrent Bulle &amp; Bois.</p></details>
+      <details><summary>Combien d'artisans vont m'appeler ?</summary><p>Trois au maximum, uniquement pour le projet que vous avez décrit. Vos coordonnées ne sont ni revendues ni utilisées pour autre chose.</p></details>
+      <details><summary>Quelles zones couvrez-vous ?</summary><p>Toute la France métropolitaine. Votre demande part vers les artisans les plus proches de votre code postal qui réalisent ce type de projet.</p></details>
+      <details><summary>Puis-je supprimer ma demande ?</summary><p>Oui, à tout moment. Écrivez-nous et nous effaçons vos données, conformément au RGPD.</p></details>
+      <details><summary>Spa ou bain nordique, que choisir ?</summary><p>Le spa offre jets et filtration permanente, avec un coût électrique annuel. Le bain nordique chauffé au bois est plus simple, sans électricité, mais se vide et se remplit plus souvent.</p></details>
+      <details><summary>Faut-il une autorisation de travaux ?</summary><p>En général non pour un spa posé au sol. Un abri ou un chalet de sauna peut nécessiter une déclaration préalable selon sa surface. L'artisan vous le précisera.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <img src="img/sau23.webp" alt="" loading="lazy">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#F0C9A6">Prêt à vous lancer ?</p>
+    <h2>Cet hiver, la chaleur est au fond du jardin.</h2>
+    <p>Décrivez votre projet en deux minutes et recevez des devis d'artisans près de chez vous.</p>
+    <a class="btn btn-accent" href="#quote">Recevoir mes devis gratuits</a>
+  </div>
+</section>
+</main>
+
+<div class="legal-page" id="page-confidentialite" hidden>
+  <div class="wrap legal-wrap">
+    <a class="legal-back" href="#">← Retour au site</a>
+    <h1>Politique de confidentialité</h1>
+    <p class="legal-date">Dernière mise à jour : 29 octobre 2026</p>
+    <h2>Qui traite vos données</h2>
+    <p>Le responsable du traitement est Victor Tricheur, entrepreneur individuel (nom commercial « Strikela Agencie », SIRET 994 247 831 00013), éditeur du site Bulle &amp; Bois. Contact : vtricheur@gmail.com · 06 37 99 00 92.</p>
+    <h2>Les données collectées</h2>
+    <p>Uniquement celles que vous saisissez dans le formulaire de devis : nom, téléphone, email, code postal, type de projet, budget, délai, emplacement et précisions éventuelles.</p>
+    <h2>Pourquoi nous les utilisons</h2>
+    <ul>
+      <li>Vous rappeler pour préciser votre projet.</li>
+      <li>Transmettre votre demande à 3 artisans maximum, choisis selon leur proximité avec votre code postal et leur spécialité.</li>
+      <li>Suivre votre demande jusqu'à la fin du projet.</li>
+    </ul>
+    <p>La base légale est votre consentement, donné en cochant la case du formulaire, et l'exécution de mesures précontractuelles prises à votre demande. Vos données ne sont jamais vendues ni utilisées pour de la prospection sans votre accord.</p>
+    <h2>Qui y a accès</h2>
+    <ul>
+      <li>Bulle &amp; Bois.</li>
+      <li>Les artisans auxquels votre demande est transmise (3 au maximum), qui vous contactent uniquement au sujet de ce projet.</li>
+      <li>Nos prestataires techniques : FormSubmit (envoi du formulaire par email, conservation 30 jours), Google (messagerie Gmail) et GitHub (hébergement du site). Certains de ces prestataires sont situés aux États-Unis ; les transferts reposent sur les garanties prévues par le RGPD, comme le Data Privacy Framework ou les clauses contractuelles types de la Commission européenne.</li>
+    </ul>
+    <h2>Combien de temps nous les gardons</h2>
+    <p>12 mois après notre dernier échange au sujet de votre projet, puis elles sont supprimées.</p>
+    <h2>Vos droits</h2>
+    <p>Vous pouvez à tout moment accéder à vos données, les faire rectifier ou supprimer, vous opposer à leur traitement, en demander la limitation ou la portabilité, et retirer votre consentement. Écrivez à vtricheur@gmail.com : nous répondons sous un mois. Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la CNIL (cnil.fr).</p>
+    <h2>Cookies</h2>
+    <p>Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience. Les polices de caractères sont hébergées sur le site lui-même : aucune donnée n'est envoyée à un service tiers lors de votre visite.</p>
+  </div>
+</div>
+
+<div class="legal-page" id="page-conditions" hidden>
+  <div class="wrap legal-wrap">
+    <a class="legal-back" href="#">← Retour au site</a>
+    <h1>Fonctionnement du service</h1>
+    <p class="legal-date">Dernière mise à jour : 29 octobre 2026</p>
+    <h2>Ce que fait Bulle &amp; Bois</h2>
+    <p>Bulle &amp; Bois est un service gratuit de mise en relation entre particuliers et professionnels de l'installation de spas, bains nordiques, saunas et hammams. Bulle &amp; Bois ne vend pas d'équipement et ne réalise pas de travaux : le devis, la vente et l'installation relèvent uniquement de l'artisan que vous choisissez.</p>
+    <h2>Comment les artisans sont choisis</h2>
+    <p>Votre demande est transmise à 3 artisans au maximum, sélectionnés selon la distance entre leur entreprise et votre code postal, leur spécialité (spa, bain nordique, sauna ou hammam) et leur disponibilité. À critères comparables, la priorité est donnée aux artisans partenaires de Bulle &amp; Bois, c'est-à-dire ceux qui ont signé un accord de commission avec nous.</p>
+    <h2>Comment Bulle &amp; Bois est rémunéré</h2>
+    <p>Le service est gratuit pour vous. Bulle &amp; Bois est rémunéré par les artisans partenaires, sous forme de commission lorsqu'un projet est signé. Cette commission n'est jamais ajoutée à votre devis par Bulle &amp; Bois.</p>
+    <h2>Votre engagement</h2>
+    <p>Aucun. Vous êtes libre de ne donner suite à aucun devis. Les prix affichés sur le site sont des fourchettes indicatives : seul le devis de l'artisan fait foi.</p>
+  </div>
+</div>
+
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>Bulle &amp; Bois</h3>
+      <p>Mise en relation entre particuliers et artisans du bien-être : spas, bains nordiques, saunas et hammams sur mesure.</p>
+      <p>Photos d'illustration : Unsplash.</p>
+    </div>
+    <div id="mentions">
+      <h3>Mentions légales</h3>
+      <p>Éditeur : Victor Tricheur EI, nom commercial « Strikela Agencie »</p>
+      <p>SIRET 994 247 831 00013</p>
+      <p>Adresse : Rouen (76)</p>
+      <p>Téléphone : 06 37 99 00 92 · Email : vtricheur@gmail.com</p>
+      <p>Directeur de la publication : Victor Tricheur</p>
+      <p>Hébergement : GitHub Pages, GitHub Inc., San Francisco, USA</p>
+    </div>
+    <div>
+      <h3>Données personnelles</h3>
+      <p>Vos coordonnées servent uniquement à traiter votre demande de devis. Aucun cookie publicitaire ou de mesure d'audience.</p>
+      <p><a href="#confidentialite">Politique de confidentialité</a> · <a href="#conditions">Fonctionnement du service</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo agrandie">
+  <img id="lb-img" alt="">
+  <button type="button" id="lb-close">Fermer</button>
+</div>
+
+<script>
+
+/* Pages légales (#confidentialite, #conditions) */
+(function(){
+  var pages={confidentialite:"page-confidentialite",conditions:"page-conditions"};
+  function show(){
+    var h=(location.hash||"").slice(1), id=pages[h];
+    Object.keys(pages).forEach(function(k){ document.getElementById(pages[k]).hidden = pages[k]!==id; });
+    document.body.classList.toggle("on-legal", !!id);
+    if(id) window.scrollTo(0,0);
+  }
+  addEventListener("hashchange", show); show();
+})();
+
+/* Vapeur légère au-dessus du bain, dans la photo d'ouverture */
+(function(){
+  var cv=document.getElementById("steam"); if(!cv) return;
+  if(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var c=cv.getContext("2d"), w=0, h=0, parts=[], run=true;
+  function size(){ var r=cv.getBoundingClientRect(), d=Math.min(devicePixelRatio||1,2); w=r.width; h=r.height; cv.width=w*d; cv.height=h*d; c.setTransform(d,0,0,d,0,0); }
+  var bg=document.querySelector(".hero-bg");
+  function src(){ // le bain est à 47 % / 62 % de la photo : on le replace selon le recadrage (object-fit: cover, position 40 % 60 %)
+    var iw=bg.naturalWidth||1600, ih=bg.naturalHeight||1200, s=Math.max(w/iw,h/ih), dw=iw*s, dh=ih*s;
+    var ox=(w-dw)*0.40, oy=(h-dh)*0.60;
+    return {x: ox+dw*0.47, y: oy+dh*0.62, spread: dw*0.04};
+  }
+  function P(init){ var s=src(); this.x=s.x+(Math.random()-.5)*s.spread*2; this.y=s.y; this.r=10+Math.random()*26; this.vy=.25+Math.random()*.45; this.ph=Math.random()*6; this.life=init?Math.random():0; this.max=.7+Math.random()*.5; }
+  function frame(t){
+    if(!run){ requestAnimationFrame(frame); return; }
+    c.clearRect(0,0,w,h);
+    while(parts.length<34) parts.push(new P(true));
+    for(var i=0;i<parts.length;i++){ var p=parts[i];
+      p.life+=.0032; p.y-=p.vy; p.x+=Math.sin(t/1500+p.ph)*.35; p.r+=.07;
+      if(p.life>p.max){ parts[i]=new P(false); continue; }
+      var a=Math.sin(Math.PI*p.life/p.max)*.14, g=c.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);
+      g.addColorStop(0,"rgba(255,255,255,"+a+")"); g.addColorStop(1,"rgba(255,255,255,0)"); c.fillStyle=g; c.fillRect(p.x-p.r,p.y-p.r,p.r*2,p.r*2);
+    }
+    requestAnimationFrame(frame);
+  }
+  size(); addEventListener("resize",function(){ size(); parts=[]; });
+  if("IntersectionObserver" in window) new IntersectionObserver(function(e){ run=e[0].isIntersecting; }).observe(cv);
+  requestAnimationFrame(frame);
+})();
+
+/* Choix du projet depuis les cartes, agrandissement des photos */
+(function(){
+  document.querySelectorAll("[data-pick]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var r=document.getElementById(b.dataset.pick); if(r) r.checked=true;
+      document.getElementById("quote").scrollIntoView({behavior:"smooth",block:"center"});
+      setTimeout(function(){ var cp=document.getElementById("cp"); if(cp) cp.focus({preventScroll:true}); },500);
+    });
+  });
+  var lb=document.getElementById("lb"), li=document.getElementById("lb-img");
+  function close(){ lb.hidden=true; li.removeAttribute("src"); }
+  document.querySelectorAll(".shot").forEach(function(f){
+    f.tabIndex=0;
+    function open(){ var i=f.querySelector("img"); li.src=i.src; li.alt=i.alt; lb.hidden=false; document.getElementById("lb-close").focus(); }
+    f.addEventListener("click",open);
+    f.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } });
+  });
+  lb.addEventListener("click",function(e){ if(e.target!==li) close(); });
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape" && !lb.hidden) close(); });
+})();
+
+/* Formulaire */
+(function(){
+  // Les demandes partent par email (FormSubmit) vers la boîte de Bulle & Bois, puis l'application de pilotage les importe. Vide = mode aperçu.
+  var ENDPOINT = "https://formsubmit.co/ajax/vtricheur@gmail.com";
+  var form = document.getElementById("quote");
+  var msg = document.getElementById("msg");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    msg.textContent = ""; msg.className = "msg";
+    var d = Object.fromEntries(new FormData(form).entries());
+    var email = (d.email||"").trim(), tel = (d.tel||"").replace(/\s/g,"");
+    var err = null;
+    if(!(d.nom||"").trim()) err = "Indiquez votre nom.";
+    else if(!/^\d{5}$/.test((d.cp||"").trim())) err = "Indiquez un code postal à 5 chiffres.";
+    else if(!/^\S+@\S+\.\S+$/.test(email) && !/^(\+33|0)[1-9]\d{8}$/.test(tel)) err = "Indiquez un email ou un téléphone valide pour être recontacté.";
+    else if(!document.getElementById("rgpd").checked) err = "Cochez la case d'accord pour que nous puissions transmettre votre demande.";
+    if(err){ msg.textContent = err; msg.className = "msg err"; return; }
+    d.rgpd = true; d.date = new Date().toISOString(); d.source = location.hostname || "apercu";
+    function finish(){ document.getElementById("form-body").hidden = true; document.getElementById("done").hidden = false; }
+    if(!ENDPOINT){ finish(); return; }
+    var lead = {nom:d.nom, tel:d.tel, email:d.email, cp:d.cp, projet:d.projet, budget:d.budget, delai:d.delai, lieu:d.lieu, details:d.details, date:d.date};
+    var mail = {_subject:"Nouvelle demande Bulle & Bois - "+d.projet+" - "+d.cp, _template:"table", _captcha:"false",
+      Nom:d.nom, Telephone:d.tel, Email:d.email, "Code postal":d.cp, Projet:d.projet, Budget:d.budget, Delai:d.delai, Emplacement:d.lieu, Precisions:d.details,
+      Donnees:"BB-DATA"+JSON.stringify(lead)+"BB-END"};
+    fetch(ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(mail)})
+      .then(function(r){ if(!r.ok) throw 0; finish(); })
+      .catch(function(){ msg.textContent = "L'envoi n'a pas abouti. Vérifiez votre connexion et réessayez."; msg.className = "msg err"; });
+  });
+})();
+</script>
+
+</body>
+</html>
