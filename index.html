@@ -499,7 +499,7 @@ body.on-legal .wa-float{display:none}
     <ul>
       <li>Bulle &amp; Bois.</li>
       <li>Les artisans auxquels votre demande est transmise (3 au maximum), qui vous contactent uniquement au sujet de ce projet.</li>
-      <li>Nos prestataires techniques : FormSubmit (envoi du formulaire par email, conservation 30 jours), Google (messagerie Gmail) et GitHub (hébergement du site). Certains de ces prestataires sont situés aux États-Unis ; les transferts reposent sur les garanties prévues par le RGPD, comme le Data Privacy Framework ou les clauses contractuelles types de la Commission européenne.</li>
+      <li>Nos prestataires techniques : Web3Forms (envoi du formulaire par email), Google (messagerie Gmail) et GitHub (hébergement du site). Certains de ces prestataires sont situés aux États-Unis ; les transferts reposent sur les garanties prévues par le RGPD, comme le Data Privacy Framework ou les clauses contractuelles types de la Commission européenne.</li>
     </ul>
     <h2>Combien de temps nous les gardons</h2>
     <p>12 mois après notre dernier échange au sujet de votre projet, puis elles sont supprimées.</p>
@@ -626,8 +626,9 @@ body.on-legal .wa-float{display:none}
 
 /* Formulaire */
 (function(){
-  // Les demandes partent par email (FormSubmit) vers la boîte de Bulle & Bois, puis l'application de pilotage les importe. Vide = mode aperçu.
-  var ENDPOINT = "https://formsubmit.co/ajax/contact@bulleetbois.fr";
+  // Les demandes partent par email (Web3Forms) vers la boîte de Bulle & Bois, puis l'application de pilotage les importe. Vide = mode aperçu.
+  var ENDPOINT = "https://api.web3forms.com/submit";
+  var ACCESS_KEY = "3718e8d1-8f8e-4fd0-a2f8-fc36a1c2472a";
   var form = document.getElementById("quote");
   var msg = document.getElementById("msg");
   form.addEventListener("submit", function(e){
@@ -645,11 +646,11 @@ body.on-legal .wa-float{display:none}
     function finish(){ document.getElementById("form-body").hidden = true; document.getElementById("done").hidden = false; }
     if(!ENDPOINT){ finish(); return; }
     var lead = {nom:d.nom, tel:d.tel, email:d.email, cp:d.cp, projet:d.projet, budget:d.budget, delai:d.delai, lieu:d.lieu, details:d.details, date:d.date};
-    var mail = {_subject:"Nouvelle demande Bulle & Bois - "+d.projet+" - "+d.cp, _template:"table", _captcha:"false",
+    var mail = {access_key:ACCESS_KEY, subject:"Nouvelle demande Bulle & Bois - "+d.projet+" - "+d.cp, from_name:"Site Bulle & Bois", replyto:email||undefined, botcheck:"",
       Nom:d.nom, Telephone:d.tel, Email:d.email, "Code postal":d.cp, Projet:d.projet, Budget:d.budget, Delai:d.delai, Emplacement:d.lieu, Precisions:d.details,
       Donnees:"BB-DATA"+JSON.stringify(lead)+"BB-END"};
     fetch(ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(mail)})
-      .then(function(r){ if(!r.ok) throw 0; finish(); })
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ if(!r.ok || j.success===false) throw 0; finish(); }); })
       .catch(function(){ msg.textContent = "L'envoi n'a pas abouti. Vérifiez votre connexion et réessayez."; msg.className = "msg err"; });
   });
 })();
