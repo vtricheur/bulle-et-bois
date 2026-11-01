@@ -132,6 +132,8 @@ section.band{padding-block:88px}
 .door ul li::before{content:"— ";color:#7FE0D6}
 .door button{align-self:flex-start;margin-top:6px;font:inherit;font-weight:700;font-size:.92rem;background:var(--photo-ink);color:#14302A;border:0;border-radius:999px;padding:10px 16px;cursor:pointer}
 .door button:hover{background:#fff}
+.door-link{color:var(--photo-ink);font-weight:600;font-size:.9rem;text-underline-offset:3px}
+.door-link:hover{color:#fff}
 
 /* inspirations masonry */
 .masonry{columns:3 300px;column-gap:16px}
@@ -191,7 +193,8 @@ details p{margin-top:10px;color:var(--muted);max-width:60ch}
 .closing p{max-width:46ch;color:rgba(244,247,245,.9)}
 
 footer{padding-block:44px 60px;color:var(--muted);font-size:.88rem}
-footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+footer .wrap{display:grid;grid-template-columns:1.2fr .8fr 1fr 1fr;gap:32px}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
 footer h3{font-family:var(--f-body);font-weight:700;font-size:.95rem;color:var(--ink);margin-bottom:8px}
 footer p+p{margin-top:6px}
 
@@ -343,6 +346,7 @@ body.on-legal .wa-float{display:none}
           <h3>Spa &amp; jacuzzi</h3>
           <ul><li>Jets massants, eau à 38 °C toute l'année</li><li>Posé, encastré ou semi-enterré</li></ul>
           <button type="button" data-pick="p-spa">Devis spa</button>
+          <a class="door-link" href="/spa-jacuzzi/">Prix et conseils</a>
         </div>
       </article>
       <article class="door">
@@ -352,6 +356,7 @@ body.on-legal .wa-float{display:none}
           <h3>Bain nordique</h3>
           <ul><li>Chauffé au bois, sans électricité</li><li>Cèdre, thermo-pin ou mélèze</li></ul>
           <button type="button" data-pick="p-nordique">Devis bain nordique</button>
+          <a class="door-link" href="/bain-nordique/">Prix et conseils</a>
         </div>
       </article>
       <article class="door">
@@ -361,6 +366,7 @@ body.on-legal .wa-float{display:none}
           <h3>Sauna</h3>
           <ul><li>Tonneau, chalet ou cabine vitrée</li><li>Poêle à bois ou électrique</li></ul>
           <button type="button" data-pick="p-sauna">Devis sauna</button>
+          <a class="door-link" href="/sauna/">Prix et conseils</a>
         </div>
       </article>
       <article class="door">
@@ -370,6 +376,7 @@ body.on-legal .wa-float{display:none}
           <h3>Hammam</h3>
           <ul><li>Maçonné ou en cabine</li><li>Banquettes chauffantes, ciel étoilé</li></ul>
           <button type="button" data-pick="p-hammam">Devis hammam</button>
+          <a class="door-link" href="/hammam/">Prix et conseils</a>
         </div>
       </article>
     </div>
@@ -462,7 +469,7 @@ body.on-legal .wa-float{display:none}
       <details><summary>Combien d'artisans vont m'appeler ?</summary><p>Trois au maximum, uniquement pour le projet que vous avez décrit. Vos coordonnées ne sont ni revendues ni utilisées pour autre chose.</p></details>
       <details><summary>Quelles zones couvrez-vous ?</summary><p>Toute la France métropolitaine. Votre demande part vers les artisans les plus proches de votre code postal qui réalisent ce type de projet.</p></details>
       <details><summary>Puis-je supprimer ma demande ?</summary><p>Oui, à tout moment. Écrivez-nous et nous effaçons vos données, conformément au RGPD.</p></details>
-      <details><summary>Spa ou bain nordique, que choisir ?</summary><p>Le spa offre jets et filtration permanente, avec un coût électrique annuel. Le bain nordique chauffé au bois est plus simple, sans électricité, mais se vide et se remplit plus souvent.</p></details>
+      <details><summary>Spa ou bain nordique, que choisir ?</summary><p>Le spa offre jets et filtration permanente, avec un coût électrique annuel. Le bain nordique chauffé au bois est plus simple, sans électricité, mais se vide et se remplit plus souvent. <a href="/spa-ou-bain-nordique/">Voir le comparatif complet</a>.</p></details>
       <details><summary>Faut-il une autorisation de travaux ?</summary><p>En général non pour un spa posé au sol. Un abri ou un chalet de sauna peut nécessiter une déclaration préalable selon sa surface. L'artisan vous le précisera.</p></details>
     </div>
   </div>
@@ -534,6 +541,16 @@ body.on-legal .wa-float{display:none}
       <p>Mise en relation entre particuliers et artisans du bien-être : spas, bains nordiques, saunas et hammams sur mesure.</p>
       <p>Photos d'illustration : Unsplash.</p>
     </div>
+    <nav aria-label="Guides">
+      <h3>Nos guides</h3>
+      <ul>
+        <li><a href="/spa-jacuzzi/">Spa et jacuzzi</a></li>
+        <li><a href="/bain-nordique/">Bain nordique</a></li>
+        <li><a href="/sauna/">Sauna extérieur</a></li>
+        <li><a href="/hammam/">Hammam</a></li>
+        <li><a href="/spa-ou-bain-nordique/">Spa ou bain nordique ?</a></li>
+      </ul>
+    </nav>
     <div id="mentions">
       <h3>Mentions légales</h3>
       <p>Éditeur : Victor Tricheur EI, nom commercial « Strikela Agencie »</p>
@@ -645,9 +662,9 @@ body.on-legal .wa-float{display:none}
     d.rgpd = true; d.date = new Date().toISOString(); d.source = location.hostname || "apercu";
     function finish(){ document.getElementById("form-body").hidden = true; document.getElementById("done").hidden = false; }
     if(!ENDPOINT){ finish(); return; }
-    var lead = {nom:d.nom, tel:d.tel, email:d.email, cp:d.cp, projet:d.projet, budget:d.budget, delai:d.delai, lieu:d.lieu, details:d.details, date:d.date};
+    var lead = {nom:d.nom, tel:d.tel, email:d.email, cp:d.cp, projet:d.projet, budget:d.budget, delai:d.delai, lieu:d.lieu, details:d.details, date:d.date, page:location.pathname};
     var mail = {access_key:ACCESS_KEY, subject:"Nouvelle demande Bulle & Bois - "+d.projet+" - "+d.cp, from_name:"Site Bulle & Bois", replyto:email||undefined, botcheck:"",
-      Nom:d.nom, Telephone:d.tel, Email:d.email, "Code postal":d.cp, Projet:d.projet, Budget:d.budget, Delai:d.delai, Emplacement:d.lieu, Precisions:d.details,
+      Nom:d.nom, Telephone:d.tel, Email:d.email, "Code postal":d.cp, Projet:d.projet, Budget:d.budget, Delai:d.delai, Emplacement:d.lieu, Precisions:d.details, Page:location.pathname,
       Donnees:"BB-DATA"+JSON.stringify(lead)+"BB-END"};
     fetch(ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(mail)})
       .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ if(!r.ok || j.success===false) throw 0; finish(); }); })
